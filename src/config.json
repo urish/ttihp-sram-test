@@ -20,6 +20,7 @@
   "ADDITIONAL_LEFS": "$(DESIGN_HOME)/../macros/lef/RM_IHPSG13_1P_1024x8_c2_bm_bist.lef",
   "ADDITIONAL_GDS": "$(DESIGN_HOME)/../macros/gds/RM_IHPSG13_1P_1024x8_c2_bm_bist.gds",
   "MACRO_PLACEMENT": "$(DESIGN_HOME)/macro_placement.cfg",
+  "ENABLE_DPO": 0,
 
   "//": "Configuration docs: https://openroad-flow-scripts.readthedocs.io/en/latest/user/FlowVariables.html",
 
