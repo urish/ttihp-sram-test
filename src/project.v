@@ -17,6 +17,7 @@ module tt_um_urish_sram_test (
 );
 
   assign uio_oe = 8'b0;  // All bidirectional IOs are inputs
+  assign uio_out = 8'b0;
 
   wire       wen = ui_in[7];
   wire       bank_select = ui_in[6];
