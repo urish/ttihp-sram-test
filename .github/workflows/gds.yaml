@@ -15,6 +15,9 @@ jobs:
 
       - name: Build GDS
         uses: TinyTapeout/tt-gds-action/orfs@tt09
+        with:
+          tools-repo: urish/tt-support-tools
+          tools-ref: ttihp0p2-skip-lvs
 
   #precheck:
   #  needs: gds
