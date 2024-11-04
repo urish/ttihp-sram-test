@@ -36,24 +36,6 @@ module tt_um_urish_sram_test (
     end
   end
 
-  RM_IHPSG13_1P_1024x8_c2_bm_bist sram (
-      .A_CLK(clk),
-      .A_MEN(rst_n),
-      .A_WEN(ui_in[7] && !bank_select),
-      .A_REN(~ui_in[7]),
-      .A_ADDR(addr),
-      .A_DIN(uio_in),
-      .A_DLY(1'b1),
-      .A_DOUT(uo_out),
-      .A_BM(8'b11111111),
-      .A_BIST_CLK(1'b0),
-      .A_BIST_EN(1'b0),
-      .A_BIST_MEN(1'b0),
-      .A_BIST_WEN(1'b0),
-      .A_BIST_REN(1'b0),
-      .A_BIST_ADDR(10'b0),
-      .A_BIST_DIN(8'b0),
-      .A_BIST_BM(8'b0)
-  );
+  assign uo_out = 0;
 
 endmodule
