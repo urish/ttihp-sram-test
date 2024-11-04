@@ -16,7 +16,7 @@ module tt_um_urish_sram_test (
     input  wire       rst_n     // reset_n - low to reset
 );
 
-  assign uio_oe = 8'b0;  // All bidirectional IOs are inputs
+  assign uio_oe  = 8'b0;  // All bidirectional IOs are inputs
   assign uio_out = 8'b0;
 
   wire       wen = ui_in[7];
@@ -39,8 +39,8 @@ module tt_um_urish_sram_test (
   RM_IHPSG13_1P_1024x8_c2_bm_bist sram (
       .A_CLK(clk),
       .A_MEN(rst_n),
-      .A_WEN(ui_in[7] && !bank_select),
-      .A_REN(~ui_in[7]),
+      .A_WEN(wen && !bank_select),
+      .A_REN(~wen),
       .A_ADDR(addr),
       .A_DIN(uio_in),
       .A_DLY(1'b1),
